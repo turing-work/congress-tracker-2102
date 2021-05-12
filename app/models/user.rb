@@ -3,4 +3,6 @@ class User <ApplicationRecord
 
     validates :email, presence: true, uniqueness: true
     validates :password_digest, presence: true
+
+    enum role: %w(default admin)
 end 
