@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   get '/logout', to: 'sessions#destroy'
 
-  namespace :admin do 
+  post '/search', to: 'congress#search'
+
+  namespace :admin do
     get '/dashboard', to: "dashboard#index"
-  end 
+  end
 end
